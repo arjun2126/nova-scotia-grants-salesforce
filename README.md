@@ -181,10 +181,6 @@ See [docs/screenshots/README.md](docs/screenshots/README.md) for capture notes a
 
 ## Demonstration and future work
 
-The [ten-minute walkthrough](docs/DEMO.md) uses the already Approved claim and
-Synced Disbursement read-only. It includes Salesforce security/Flow/Apex/reporting
-questions and browser fallbacks.
-
 Future enhancements include assignment automation, explicit rejection, immutable
 ledger hardening, production GL authentication and reconciliation, richer impact
 reporting, and concurrency/bulk hardening. Home-page redesign and Agentforce are
