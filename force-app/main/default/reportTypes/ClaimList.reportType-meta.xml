@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Claim__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Fictional demonstration only. Reporting view over Claim__c for the Nova Scotia grant management platform.</description>
+    <label>Claim List</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Claim__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Claim_Status__c</field>
+            <table>Claim__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Application__c</field>
+            <table>Claim__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Vendor_Invoice_Amount__c</field>
+            <table>Claim__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Reimbursement_Amount__c</field>
+            <table>Claim__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Approval_Date__c</field>
+            <table>Claim__c</table>
+        </columns>
+        <masterLabel>Claim List</masterLabel>
+    </sections>
+</ReportType>

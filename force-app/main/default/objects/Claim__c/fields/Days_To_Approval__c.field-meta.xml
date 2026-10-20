@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_To_Approval__c</fullName>
+    <description>Elapsed days between submission and approval. Fictional demonstration data only.</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(NOT(ISBLANK(Claim_Submitted_Date__c)), NOT(ISBLANK(Approval_Date__c))), Approval_Date__c - Claim_Submitted_Date__c, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Days To Approval</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

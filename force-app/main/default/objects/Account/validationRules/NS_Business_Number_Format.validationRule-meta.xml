@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_Business_Number_Format</fullName>
+    <active>true</active>
+    <description>Illustrative rule only. Length check, not a statutory Nova Scotia registry format.</description>
+    <errorConditionFormula>AND(NOT(ISBLANK(NS_Business_Number__c)), OR(LEN(NS_Business_Number__c) &lt; 9, LEN(NS_Business_Number__c) &gt; 20))</errorConditionFormula>
+    <errorDisplayField>NS_Business_Number__c</errorDisplayField>
+    <errorMessage>Illustrative business number must be 9 to 20 characters. This is not a statutory format check.</errorMessage>
+</ValidationRule>

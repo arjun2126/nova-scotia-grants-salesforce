@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Count_NonNegative</fullName>
+    <active>true</active>
+    <description>Illustrative rule. Employee count cannot be negative.</description>
+    <errorConditionFormula>Employee_Count__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Employee_Count__c</errorDisplayField>
+    <errorMessage>Employee count cannot be negative.</errorMessage>
+</ValidationRule>

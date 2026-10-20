@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GL_Sync_Requested__c</fullName>
+    <description>Timestamp when the disbursement entered Pending sync. Used by the scheduled audit. Fictional demonstration data only.</description>
+    <label>GL Sync Requested</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

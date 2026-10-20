@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Application_Program_Director_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Grants the Program Director role read access to all applications, and to their subordinate Claims Coordinators. Fictional demonstration data only.</description>
+        <label>Program Director Application Read</label>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Nova_Grants_Program_Director</roleAndSubordinatesInternal>
+        </sharedTo>
+    </sharingOwnerRules>
+</SharingRules>

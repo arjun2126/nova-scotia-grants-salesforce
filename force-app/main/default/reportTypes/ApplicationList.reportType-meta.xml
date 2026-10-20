@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Application__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Fictional demonstration only. Reporting view over Application__c for the Nova Scotia grant management platform.</description>
+    <label>Application List</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Stage__c</field>
+            <table>Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Account__c</field>
+            <table>Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Program__c</field>
+            <table>Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Requested_Amount__c</field>
+            <table>Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Approved_Amount__c</field>
+            <table>Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Reimbursed_Amount__c</field>
+            <table>Application__c</table>
+        </columns>
+        <masterLabel>Application List</masterLabel>
+    </sections>
+</ReportType>

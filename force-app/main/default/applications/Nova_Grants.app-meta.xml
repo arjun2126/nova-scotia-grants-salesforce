@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Program_Claim_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Claim__c</pageOrSobjectType>
+    </actionOverrides>
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>Independent fictional demonstration of Nova Scotia grant intake, verified claims, funding controls, disbursements, and economic outcomes.</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Nova Grants</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>Program__c</tabs>
+    <tabs>Application__c</tabs>
+    <tabs>Claim__c</tabs>
+    <tabs>Disbursement__c</tabs>
+    <tabs>Impact_Metric__c</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

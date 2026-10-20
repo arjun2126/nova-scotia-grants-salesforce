@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Disbursement__c$Name</field>
+    </columns>
+    <columns>
+        <field>Disbursement__c$Claim__c</field>
+    </columns>
+    <columns>
+        <field>Disbursement__c$Payment_Reference__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Disbursement__c$Approved_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Disbursement__c$Audit_Flagged__c</field>
+    </columns>
+    <description>Disbursements grouped by general ledger sync status, showing audit flags. Fictional demonstration data only.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Disbursement__c$GL_Sync_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Disbursements By GL Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>DisbursementList__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

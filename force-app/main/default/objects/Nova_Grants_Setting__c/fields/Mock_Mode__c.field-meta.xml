@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mock_Mode__c</fullName>
+    <description>When true, the integration service records a simulated sync without an external callout.</description>
+    <defaultValue>true</defaultValue>
+    <label>Mock Mode</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

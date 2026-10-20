@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Authorizes the Nova Grants claim adjudication service to create disbursements and update financial totals.</description>
+    <isLicensed>false</isLicensed>
+    <label>Nova Grants Claim Adjudication</label>
+</CustomPermission>

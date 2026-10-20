@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claims_Pending_Review</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Application__c</columns>
+    <columns>Claim_Status__c</columns>
+    <columns>Proof_of_Payment_Verified__c</columns>
+    <columns>Reimbursement_Amount__c</columns>
+    <columns>Claim_Submitted_Date__c</columns>
+    <columns>Approval_Date__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Claim_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>Claim_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Rejected</value>
+    </filters>
+    <filters>
+        <field>Claim_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Disbursed</value>
+    </filters>
+    <label>Claims Pending Review</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

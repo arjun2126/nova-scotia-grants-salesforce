@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capacity_Utilization__c</fullName>
+    <description>Approved Application commitments divided by the Program funding cap. Disbursements are a subset of approvals and are shown separately, never added again. Fictional demonstration data only.</description>
+    <formula>IF(Funding_Cap__c &gt; 0, Committed_Amount__c / Funding_Cap__c, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Capacity Utilization</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

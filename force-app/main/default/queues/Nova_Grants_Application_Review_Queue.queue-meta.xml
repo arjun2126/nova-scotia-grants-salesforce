@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <description>Shared queue for grant applications awaiting eligibility review. Claim records are controlled by their parent application so they cannot own a queue. No members are added by metadata. Fictional demonstration data only.</description>
+    <name>Nova Grants Application Review Queue</name>
+    <queueSobject>
+        <sobjectType>Application__c</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Range</fullName>
+    <active>true</active>
+    <description>Illustrative rule. Minimum employee threshold cannot exceed the maximum.</description>
+    <errorConditionFormula>AND(NOT(ISBLANK(Min_Employees__c)), NOT(ISBLANK(Max_Employees__c)), Min_Employees__c &gt; Max_Employees__c)</errorConditionFormula>
+    <errorDisplayField>Max_Employees__c</errorDisplayField>
+    <errorMessage>Minimum employees cannot exceed maximum employees.</errorMessage>
+</ValidationRule>

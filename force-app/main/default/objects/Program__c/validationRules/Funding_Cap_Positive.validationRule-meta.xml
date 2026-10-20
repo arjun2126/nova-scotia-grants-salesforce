@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funding_Cap_Positive</fullName>
+    <active>true</active>
+    <description>Illustrative rule. Funding cap must be greater than zero.</description>
+    <errorConditionFormula>Funding_Cap__c &lt;= 0</errorConditionFormula>
+    <errorDisplayField>Funding_Cap__c</errorDisplayField>
+    <errorMessage>Funding cap must be greater than zero.</errorMessage>
+</ValidationRule>

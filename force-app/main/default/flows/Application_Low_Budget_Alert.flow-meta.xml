@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Low_Budget</name>
+        <label>Check Low Budget</label>
+        <locationX>150</locationX>
+        <locationY>150</locationY>
+        <defaultConnectorLabel>No Alert Needed</defaultConnectorLabel>
+        <rules>
+            <name>Send_Alert</name>
+            <conditionLogic>1 AND 2</conditionLogic>
+            <conditions>
+                <leftValueReference>Threshold_Ratio</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>0.25</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Prior_Ratio</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>0.25</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Follow_Up_Task</targetReference>
+            </connector>
+            <label>Send Alert</label>
+        </rules>
+    </decisions>
+    <description>Creates a follow-up Task for the application owner when the remaining approved funding on a grant application falls below 25 percent of the approved amount. Crossing-only logic fires once when the threshold is breached. Fictional demonstration data only.</description>
+    <formulas>
+        <name>Prior_Ratio</name>
+        <dataType>Number</dataType>
+        <expression>IF({!$Record__Prior.Approved_Amount__c} &gt; 0, ({!$Record__Prior.Approved_Amount__c} - {!$Record__Prior.Reimbursed_Amount__c}) / {!$Record__Prior.Approved_Amount__c}, 1)</expression>
+        <scale>4</scale>
+    </formulas>
+    <formulas>
+        <name>Threshold_Ratio</name>
+        <dataType>Number</dataType>
+        <expression>IF({!$Record.Approved_Amount__c} &gt; 0, ({!$Record.Approved_Amount__c} - {!$Record.Reimbursed_Amount__c}) / {!$Record.Approved_Amount__c}, 1)</expression>
+        <scale>4</scale>
+    </formulas>
+    <interviewLabel>Application Low Budget Alert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Application Low Budget Alert</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Follow_Up_Task</name>
+        <label>Create Follow Up Task</label>
+        <locationX>250</locationX>
+        <locationY>250</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Low remaining grant budget: {!$Record.Name}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <runInMode>SystemModeWithSharing</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Check_Low_Budget</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Approved_Amount__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <object>Application__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

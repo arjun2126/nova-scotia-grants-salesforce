@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Program__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Fictional demonstration only. Reporting view over Program__c for the Nova Scotia grant management platform.</description>
+    <label>Program List</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Program__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Program_Code__c</field>
+            <table>Program__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Program_Status__c</field>
+            <table>Program__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Funding_Cap__c</field>
+            <table>Program__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Committed_Amount__c</field>
+            <table>Program__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Disbursed_Amount__c</field>
+            <table>Program__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Capacity_Utilization__c</field>
+            <table>Program__c</table>
+        </columns>
+        <masterLabel>Program List</masterLabel>
+    </sections>
+</ReportType>

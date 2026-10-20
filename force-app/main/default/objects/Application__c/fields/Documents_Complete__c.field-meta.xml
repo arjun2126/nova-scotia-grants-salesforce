@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Documents_Complete__c</fullName>
+    <description>Indicates that required proof documents were uploaded. Fictional demonstration data only.</description>
+    <defaultValue>false</defaultValue>
+    <label>Documents Complete</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

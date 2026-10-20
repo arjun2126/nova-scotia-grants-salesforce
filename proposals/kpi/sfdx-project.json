@@ -1,0 +1,6 @@
+{
+  "packageDirectories": [{"path": "force-app", "default": true}],
+  "name": "nova-grants-kpi-proposal",
+  "namespace": "",
+  "sourceApiVersion": "68.0"
+}

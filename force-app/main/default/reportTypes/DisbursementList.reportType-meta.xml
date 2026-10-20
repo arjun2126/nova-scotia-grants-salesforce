@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Disbursement__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Fictional demonstration only. Reporting view over Disbursement__c for the Nova Scotia grant management platform.</description>
+    <label>Disbursement List</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Disbursement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>GL_Sync_Status__c</field>
+            <table>Disbursement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Claim__c</field>
+            <table>Disbursement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Payment_Reference__c</field>
+            <table>Disbursement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Approved_Amount__c</field>
+            <table>Disbursement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Audit_Flagged__c</field>
+            <table>Disbursement__c</table>
+        </columns>
+        <masterLabel>Disbursement List</masterLabel>
+    </sections>
+</ReportType>
